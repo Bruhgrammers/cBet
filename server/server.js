@@ -1,10 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+// Express Setup
+var express = require('express');
+var app = express();
 
-const app = express();
+// DB Setup
+var db = require('./db/schema.js');
 
-module.exports.app = app;
-app.use(bodyParser.json());
+// Routes Setup
+require('./routes.js')(app, express);
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -15,7 +17,6 @@ app.use(function(req, res, next) {
 
 app.set('port', process.env.PORT || 3000);
 
-app.use(express.static('./client'));
 
 if (module.parent) {
   module.exports = app;
