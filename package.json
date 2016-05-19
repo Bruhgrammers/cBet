@@ -1,0 +1,28 @@
+{
+  "name": "cBet",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run env NODE_ENV=production && node server.js",
+    "start-dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bruhgrammers/cBet"
+  },
+  "author": "NukeZ, SlickZ",
+  "license": "ISC",
+  "bugs": {
+  },
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "eslint": "^2.5.3",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3",
+    "nodemon": "^1.9.1"
+  }
+}
