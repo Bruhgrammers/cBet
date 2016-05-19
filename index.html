@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>cBet</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!-- <script src='data.js'></script> -->
   </head>
   <body>
     cBet Login Page
   </body>
+  <script>
+  $.ajax({url: "http://espn.go.com/mlb/scoreboard/_/date/20160519", success: function(result){
+      console.log(result);
+  }});
+  </script>
 </html>
